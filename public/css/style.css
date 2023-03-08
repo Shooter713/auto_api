@@ -1,0 +1,113 @@
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 1em;
+}
+
+th, td {
+    padding: 0.5em;
+    text-align: left;
+    border: 1px solid #ddd;
+    position: relative;
+}
+
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.delete-row-btn {
+    display: none;
+    position: absolute;
+    top: 7px;
+}
+
+.edit-row-btn {
+    display: none;
+    position: absolute;
+    top: 7px;
+    left: 95px;
+}
+
+tr:hover .delete-row-btn {
+    display: block;
+}
+
+tr:hover .edit-row-btn {
+    display: block;
+}
+
+.modal-body {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    display: none;
+}
+
+.close {
+    font-size: 20px;
+    font-weight: bold;
+    position: absolute;
+    right: 30px;
+    cursor: pointer;
+}
+
+.btn-success{
+    font-size: 20px;
+    font-weight: bold;
+    position: absolute;
+    right: 60px;
+    cursor: pointer;
+    color: white;
+    background: #2da82d;
+    border-radius: 5px;
+}
+
+.modal-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+input {
+    border: none;
+    border-bottom: 1px solid #ccc;
+    font-size: 16px;
+    padding: 5px;
+    width: 100%;
+}
+
+input:focus {
+    outline: none;
+    border-bottom: 1px solid #666;
+}
+
+button.btn.btn-primary {
+    margin: 25px;
+}
+
+.paginate-table{
+    width: 500px;
+    margin: auto;
+    text-align: center;
+}
+
+.paginate-table svg{
+    width: 50px!important;
+}

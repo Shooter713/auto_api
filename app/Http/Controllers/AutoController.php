@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\Auto;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Log;
 
 
 class AutoController extends Controller
@@ -36,7 +35,6 @@ class AutoController extends Controller
 
     public function addAuto(Request $request)
     {
-
         Auto::updateOrCreate([
             'vin_code'      =>$request->vin_code,
         ],[
@@ -46,14 +44,12 @@ class AutoController extends Controller
             'color'         =>$request->color,
 
         ]);
-
         return response()->json(['result'=>true], 200);
     }
 
     public function deleteAuto(Request $request)
     {
         Auto::where('id', $request->id)->delete();
-
         return response()->json(array('delete' => true), 200);
     }
 

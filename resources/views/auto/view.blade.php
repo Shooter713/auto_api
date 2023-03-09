@@ -22,11 +22,16 @@
 <table>
     <thead>
         <tr class="table-sort">
-            <th data-element-sort="@if($sort_key && $sort_key=='id')<?php echo $sort_sort == 'asc' ? 'desc': 'asc'; ?>@else asc @endif" data-element-key="id">id</th>
-            <th data-element-sort="@if($sort_key && $sort_key=='user_name')<?php echo $sort_sort == 'asc' ? 'desc': 'asc'; ?>@else asc @endif" data-element-key="user_name">Ім'я</th>
-            <th data-element-sort="@if($sort_key && $sort_key=='state_number')<?php echo $sort_sort == 'asc' ? 'desc': 'asc'; ?>@else asc @endif" data-element-key="state_number">Державний номер</th>
-            <th data-element-sort="@if($sort_key && $sort_key=='color')<?php echo $sort_sort == 'asc' ? 'desc': 'asc'; ?>@else asc @endif" data-element-key="color">Колір</th>
-            <th data-element-sort="@if($sort_key && $sort_key=='vin_code')<?php echo $sort_sort == 'asc' ? 'desc': 'asc'; ?>@else asc @endif" data-element-key="vin_code">Vin Code</th>
+            <th data-element-sort="@if($sort_key && $sort_key=='id')<?php echo $sort_sort == 'asc' ? 'desc': 'asc'; ?>@else asc @endif"
+                data-element-key="id">id<span class="sort">&#8644;</span></th>
+            <th data-element-sort="@if($sort_key && $sort_key=='user_name')<?php echo $sort_sort == 'asc' ? 'desc': 'asc'; ?>@else asc @endif"
+                data-element-key="user_name">Ім'я<span class="sort">&#8644;</span></th>
+            <th data-element-sort="@if($sort_key && $sort_key=='state_number')<?php echo $sort_sort == 'asc' ? 'desc': 'asc'; ?>@else asc @endif"
+                data-element-key="state_number">Державний номер<span class="sort">&#8644;</span></th>
+            <th data-element-sort="@if($sort_key && $sort_key=='color')<?php echo $sort_sort == 'asc' ? 'desc': 'asc'; ?>@else asc @endif"
+                data-element-key="color">Колір<span class="sort">&#8644;</span></th>
+            <th data-element-sort="@if($sort_key && $sort_key=='vin_code')<?php echo $sort_sort == 'asc' ? 'desc': 'asc'; ?>@else asc @endif"
+                data-element-key="vin_code">Vin Code<span class="sort">&#8644;</span></th>
             <th style="width: 200px">Дії</th>
         </tr>
     </thead>
@@ -95,6 +100,8 @@
     $(document).on('click','#button', function(){
 
         $('.modal-body').css('display', 'block')
+
+        $('#button').css('display', 'none')
 
     });
 
